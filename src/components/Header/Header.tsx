@@ -4,7 +4,7 @@ import "./header.scss";
 export const Header = () => {
   return (
     <header>
-      <span>ZOUL😼</span>
+      <span>ZOUL !😼</span>
       <TonConnectButton />
     </header>
   );

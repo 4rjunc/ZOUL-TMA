@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@telegram-apps/telegram-ui": "^2.1.8",
     "@tonconnect/ui-react": "2.0.9",
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
     "eruda": "^2.11.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
