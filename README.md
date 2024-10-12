@@ -3,8 +3,10 @@ ZOUL
 To use the Telegram Mini App follow this link : [HERE](https://t.me/zoulhelper_bot)
 
 <center>
-![img](/public/zoul.png)
+
+![img](/assets/zoul.png)
 Monetize Your Influence, Connect with Fans
+
 </center>
 
 This Demo dApp showcases the integration with @tonconnect/ui-react. Experience it live at [Demo dApp with Wallet](https://ton-connect.github.io/demo-dapp-with-wallet/).
