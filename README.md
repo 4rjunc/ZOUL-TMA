@@ -1,6 +1,6 @@
 ZOUL
 
-To use the Telegram Mini App follow this link : ![HERE](https://t.me/zoulhelper_bot)
+To use the Telegram Mini App follow this link : [HERE](https://t.me/zoulhelper_bot)
 
 <center>
 ![img](/public/zoul.png)
