@@ -30,11 +30,11 @@ export const Home = () => {
         </Card>
       </Section>
       {wallet ? (
-        <Section>
+        <Section className="mb-4">
           <Card className="m-4">
             <Section
-              footer="ratings are done by fans based on how your calls"
-              header="Your's rating"
+              footer="Fans rate your calls based on their experience"
+              header="Your Rating"
             >
               <Rating precision={1} value={3} />
             </Section>

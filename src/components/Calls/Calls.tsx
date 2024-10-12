@@ -1,4 +1,12 @@
-import { List, Title, Cell, Divider, Avatar } from "@telegram-apps/telegram-ui";
+import {
+  List,
+  Title,
+  Cell,
+  Divider,
+  Avatar,
+  Section,
+  Card,
+} from "@telegram-apps/telegram-ui";
 import { Icon28NotificationWaves } from "@vkontakte/icons";
 
 import { useTonConnectUI, useTonWallet } from "@tonconnect/ui-react";
@@ -32,51 +40,60 @@ export const Calls = () => {
   const [tonConnectUi] = useTonConnectUI();
 
   return (
-    <div>
-      <Title level="1" weight="2" className="text-center">
-        Fans waiting for you
-      </Title>
+    <div className="send-tx-form mb-5">
+      {wallet && (
+        <Title level="1" weight="2" className="text-center">
+          Your Fans Call List
+        </Title>
+      )}
       {wallet ? (
-        <List>
-          <List
-            style={{
-              background: "var(--tgui--secondary_bg_color)",
-            }}
-          >
-            <div
+        <div>
+          <Section header="Here's the list">
+            <List
               style={{
-                background: "var(--tgui--bg_color)",
+                background: "var(--tgui--secondary_bg_color)",
               }}
             >
-              {userData.map((user, index) => (
-                <div key={index}>
-                  <Cell>
-                    <div className="flex justify-between items-center">
-                      {/* Left part with index, avatar, and username */}
-                      <div className="flex items-center gap-3">
-                        <span>{index + 1}</span>
-                        <Avatar size={40} src={user.avatarUrl} />
-                        <span>{user.username}</span>
-                      </div>
+              <div
+                style={{
+                  background: "var(--tgui--bg_color)",
+                }}
+              >
+                {userData.map((user, index) => (
+                  <div key={index}>
+                    <Cell>
+                      <div className="flex justify-between items-center">
+                        {/* Left part with index, avatar, and username */}
+                        <div className="flex items-center gap-3">
+                          <span>{index + 1}</span>
+                          <Avatar size={40} src={user.avatarUrl} />
+                          <span>{user.username}</span>
+                        </div>
 
-                      {/* Right-aligned bell icon */}
-                      <div className="flex justify-end">
-                        <Icon28NotificationWaves className="telegram-blue" />
+                        {/* Right-aligned bell icon */}
+                        <div className="flex justify-end">
+                          <Icon28NotificationWaves className="telegram-blue" />
+                        </div>
                       </div>
-                    </div>
-                  </Cell>
-                  <Divider />
-                </div>
-              ))}
-            </div>{" "}
-          </List>
-        </List>
-      ) : (
-        <div className="send-tx-form">
-          <button onClick={() => tonConnectUi.openModal()}>
-            Connect your wallet to view the list 📋 👀
-          </button>
+                    </Cell>
+                    <Divider />
+                  </div>
+                ))}
+              </div>{" "}
+            </List>
+          </Section>
         </div>
+      ) : (
+        <Section
+          footer="Here's the list of fans with scheduled calls"
+          header="Fans Waiting for You!"
+        >
+          <div className="send-tx-form">
+            <button onClick={() => tonConnectUi.openModal()}>
+              Connect wallet to view the list 📋👀
+            </button>
+          </div>
+        </Section>
       )}
     </div>
   );

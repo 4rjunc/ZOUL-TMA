@@ -79,6 +79,7 @@ export function Profile() {
             <Input header="X" placeholder="https://x.com/..." />
             <Input header="Instagram" placeholder="https://instagram.com/..." />
             <Input header="Youtube" placeholder="https://youtube.com/..." />
+            <Input header="How much $ per minute" placeholder="$1" />
             <Slider
               step={25}
               before={
