@@ -4,8 +4,9 @@ To use the Telegram Mini App follow this link : [HERE](https://t.me/zoulhelper_b
 
 <center>
 
-![img](/assets/zoul.png)
-Monetize Your Influence, Connect with Fans
+  <img src="/assets/zoul.png" alt="img" width="400px" />
+
+  <p>Monetize Your Influence, Connect with Fans</p>
 
 </center>
 
