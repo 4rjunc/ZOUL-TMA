@@ -3,9 +3,11 @@ import "./header.scss";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="flex flex-col items-center justify-center">
       <span>ZOUL !😼</span>
-      <TonConnectButton />
+      <div>
+        <TonConnectButton />
+      </div>
     </header>
   );
 };
