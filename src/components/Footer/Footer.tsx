@@ -1,14 +1,13 @@
-import { AppRoot, Placeholder, Tabbar } from "@telegram-apps/telegram-ui";
-import { Icon24SunLow } from "@telegram-apps/telegram-ui/dist/icons/24/sun_low";
+import { Tabbar } from "@telegram-apps/telegram-ui";
+import { Icon24User, Icon24Home, Icon24Sparkle } from "@vkontakte/icons";
 import "./footer.scss";
-import { useEffect, useState } from "react";
-import { ColorsModal } from "./ColorsModal/ColorsModal";
+import { useState } from "react";
 
 export const Footer = () => {
   const tabs = [
-    { id: "home", text: "Home", Icon: Icon24SunLow },
-    { id: "search", text: "Search", Icon: Icon24SunLow },
-    { id: "profile", text: "Profile", Icon: Icon24SunLow },
+    { id: "home", text: "Home", Icon: Icon24Home },
+    { id: "calls", text: "Calls", Icon: Icon24Sparkle },
+    { id: "profile", text: "Profile", Icon: Icon24User },
   ];
   const [currentTab, setCurrentTab] = useState(tabs[0].id);
 

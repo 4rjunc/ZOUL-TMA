@@ -60,7 +60,7 @@ export function TxForm() {
   );
 
   return (
-    <div className="send-tx-form">
+    <div className="send-tx-form mb-5">
       <h3>Create Your Profile</h3>
       <ReactJson
         src={defaultTx}
@@ -96,7 +96,7 @@ export function TxForm() {
         </div>
       ) : (
         <button onClick={() => tonConnectUi.openModal()}>
-          Connect wallet to send the transaction
+          Connect Your Wallet Connect With Fans 🎉
         </button>
       )}
     </div>

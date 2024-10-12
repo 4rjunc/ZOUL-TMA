@@ -3,7 +3,9 @@ import "./trackers";
 import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
+import { Home } from "./components/Home/Home";
 import { TxForm } from "./components/TxForm/TxForm";
+import { Calls } from "./components/Calls/Calls";
 
 function App() {
   return (
@@ -107,6 +109,8 @@ function App() {
     >
       <div className="app">
         <Header />
+        <Home />
+        <Calls />
         <TxForm />
         {/*<TonProofDemo />*/}
         <Footer />
