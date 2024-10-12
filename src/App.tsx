@@ -4,7 +4,7 @@ import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
-import { TxForm } from "./components/TxForm/TxForm";
+import { Profile } from "./components/Profile/Profile";
 import { Calls } from "./components/Calls/Calls";
 import {
   BrowserRouter as Router,
@@ -25,7 +25,7 @@ const CallPage = () => (
 );
 const ProfilePage = () => (
   <div>
-    <TxForm />
+    <Profile />
   </div>
 );
 

@@ -4,7 +4,7 @@ import "./header.scss";
 export const Header = () => {
   return (
     <header className="flex flex-col items-center justify-center">
-      <span>ZOUL !😼</span>
+      <span className="telegram-blue mt-2">ZOUL !😼</span>
       <div>
         <TonConnectButton />
       </div>

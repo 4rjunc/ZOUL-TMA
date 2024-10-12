@@ -9,6 +9,7 @@ import {
   Textarea,
   Section,
   Slider,
+  Title,
 } from "@telegram-apps/telegram-ui";
 import { Icon24SunLow } from "@telegram-apps/telegram-ui/dist/icons/24/sun_low";
 
@@ -48,7 +49,7 @@ const defaultTx: SendTransactionRequest = {
   ],
 };
 
-export function TxForm() {
+export function Profile() {
   const [tx, setTx] = useState(defaultTx);
   const wallet = useTonWallet();
   const [tonConnectUi] = useTonConnectUI();
@@ -61,14 +62,11 @@ export function TxForm() {
 
   return (
     <div className="send-tx-form mb-5">
-      <h3>Create Your Profile</h3>
-      <ReactJson
-        src={defaultTx}
-        theme="ocean"
-        onEdit={onChange}
-        onAdd={onChange}
-        onDelete={onChange}
-      />
+      {wallet && (
+        <Title level="1" weight="2" className="text-center">
+          Your Profile
+        </Title>
+      )}
       {wallet ? (
         <div>
           {/*<button onClick={() => tonConnectUi.sendTransaction(tx)}>
@@ -77,8 +75,10 @@ export function TxForm() {
 */}
           <Section header="Create Profile">
             <Input header="Your Name" placeholder="Pewdewpie" />
-
-            <Textarea header="Bio" placeholder="Im a content creator" />
+            <Textarea header="Bio" placeholder="Tell your story" />
+            <Input header="X" placeholder="https://x.com/..." />
+            <Input header="Instagram" placeholder="https://instagram.com/..." />
+            <Input header="Youtube" placeholder="https://youtube.com/..." />
             <Slider
               step={25}
               before={
@@ -95,9 +95,16 @@ export function TxForm() {
           </Section>
         </div>
       ) : (
-        <button onClick={() => tonConnectUi.openModal()}>
-          Connect Your Wallet Connect With Fans 🎉
-        </button>
+        <Section
+          footer="Tell your story – add your name, bio, and socials!"
+          header="Set up your profile"
+        >
+          <div className="send-tx-form">
+            <button onClick={() => tonConnectUi.openModal()}>
+              Connect Your Wallet, Connect With Fans 🎉
+            </button>
+          </div>
+        </Section>
       )}
     </div>
   );
