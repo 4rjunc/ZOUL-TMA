@@ -1,6 +1,5 @@
 import styles from "./ProfileCreate.module.css";
 import React, { useCallback, useState } from "react";
-import ReactJson from "react-json-view";
 import "./style.scss";
 import {
   ColorInput,
